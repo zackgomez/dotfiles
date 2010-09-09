@@ -1,0 +1,9 @@
+background no
+out_to_console yes
+out_to_x no
+update_interval 1
+total_run_times 0
+use_spacer none
+
+TEXT
+$mpd_smart :: ${cpu cpu0}% CPU ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}% ${cpu cpu5}% ${cpu cpu6}% ${cpu cpu7}% ${cpu cpu8}% :: ${memperc}% (mem) :: ${downspeedf etho0}K/s ${upspeedf eth0}K/s :: ${time %a %b %d %I:%M:%S%P}
