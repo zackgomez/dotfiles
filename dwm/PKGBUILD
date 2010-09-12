@@ -37,6 +37,10 @@ build() {
   install -m644 -D $srcdir/dwm.desktop $pkgdir//etc/X11/sessions/dwm.desktop
 }
 md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
-         'ab8f5cce32732aadc162814660239e58'
+         'ae88d828aba324af5a1462b1b5ce6ab8'
+         '214391d5bf8d3cce8de2edcb54203ed4'
+         '939f403a71b6e85261d09fc3412269ee')
+md5sums=('f0b422bfeaa812d66c6dd15c3cc92a6b'
+         'ae88d828aba324af5a1462b1b5ce6ab8'
          '214391d5bf8d3cce8de2edcb54203ed4'
          '939f403a71b6e85261d09fc3412269ee')
