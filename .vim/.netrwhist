@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/etc/X11/sessions'
+let g:netrw_dirhist_2='/home/zack/programming'
+let g:netrw_dirhist_3='/home/zack/programming/netsim/output'
+let g:netrw_dirhist_4='/home/zack/programming/gitolite-admin/conf'
