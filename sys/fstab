@@ -1,0 +1,23 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>        <dir>         <type>    <options>          <dump> <pass>
+devpts                 /dev/pts      devpts    defaults            0      0
+shm                    /dev/shm      tmpfs     nodev,nosuid        0      0
+
+#/dev/cdrom             /media/cd   auto    ro,user,noauto,unhide   0      0
+#/dev/dvd               /media/dvd  auto    ro,user,noauto,unhide   0      0
+#/dev/fd0               /media/fl   auto    user,noauto             0      0
+
+UUID=95168f3c-2fd6-4ae6-b219-253175756025 /home ext4 defaults 0 1
+UUID=69c8e77c-58be-441d-85d0-0ce324d0d6bd swap swap defaults 0 0
+# SSD boot directory
+UUID=47b95ee0-a076-4221-a1d7-ba4730225ad9 /boot ext2 defaults,noatime,discard 0 1
+# SSD / directory, noatime
+UUID=eaf96f0f-5cb7-49e6-a501-e3df60a0a373 / ext4 defaults,noatime,discard 0 1
+UUID=5CDAD079DAD0513E /mnt/MediaRaid ntfs-3g umask=000,gid=100,rw 0 2
+# TMPFS is ramfs for tmp
+none /tmp tmpfs nodev,nosuid,noatime,size=1000M,mode=1777 0 0
+
+//napalm/DropOff /mnt/napalm cifs username=skurve,password=DontStream 0 2
+//napalm/Ruddock /mnt/robjohn cifs username=skurve,password=DontStream 0 2
