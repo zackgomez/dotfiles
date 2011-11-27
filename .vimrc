@@ -17,6 +17,11 @@ set expandtab
 set autoindent
 set smarttab
 
+"Color column options
+highlight ColorColumn ctermbg=8
+"set cc=80
+"set number
+
 " Fix public: and private: in C++
 set cino+=g0
 " Fix case labels
