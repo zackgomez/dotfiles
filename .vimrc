@@ -38,8 +38,9 @@ set nocp
 autocmd FileType c,cpp,slang set cindent
 autocmd FileType make set noexpandtab
 autocmd FileType c set formatoptions+=ro
-autocmd FileType python set smartindent
+autocmd FileType python set autoindent
 autocmd FileType html set wrap
+autocmd FileType haskell set sw=2
 
 "For glsl syntax highlighting
 au BufNewFile,BufRead *.frag,*vert,*.fp,*.vp,*.glsl setf glsl
@@ -53,12 +54,14 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-" Omnicomplete options
-set tags+=~/.vim/cpp-tags
-set tags+=~/.vim/wxwidgetstags
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/sdl
-imap <C-space> <C-x><C-o>
+" Autocomplete options
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+let g:clang_use_library = 1
+"" Use CTRL-Space for Omnifunc completions, if omnifunc is supported
+if has('eval') || has('insert_expand')
+      inoremap <Nul> <C-x><C-o>
+  endif
 
 " Doxygen Toolkit options
 let g:DoxygenToolkit_briefTag_pre=""
